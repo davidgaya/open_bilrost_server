@@ -1,0 +1,26 @@
+{
+  "node": true,
+  "esnext": true,
+  "browser": true,
+  "devel": true,
+  "typed": true,
+  "globalstrict": true,
+  "curly": true,
+  "eqeqeq": true,
+  "forin": true,
+  "freeze": true,
+  "latedef": true,
+  "noarg": true,
+  "nocomma": true,
+  "nonbsp": true,
+  "undef": true,
+  "unused": "vars",
+  "singleGroups": false,
+  "notypeof": true,
+  "nonew": true,
+  "funcscope": true,
+  "shadow": false,
+  "futurehostile": true,
+  "strict": true
+}
+

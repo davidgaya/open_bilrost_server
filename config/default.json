@@ -1,0 +1,27 @@
+{
+  "name": "asset_manager_backend",
+  "github": {
+    "api_url": "https://api.github.com",
+    "login_url": "https://github.com/login/oauth/authorize?client_id={client_id}&scope={scope}",
+    "access_token_url": "https://github.com/login/oauth/access_token",
+    "client_id": "this_is_a_client_id",
+    "client_secret": "this_is_a_client_secret",
+    "scope": "read:org, repo",
+    "organization": "org_name",
+    "teams": ["team_name_1", "team_name_2"]
+  },
+  "predefined_sessions": "",
+  "registry_url": "registry_url",
+  "S3": {
+    "AWS_ACCESS_KEY": "this_is_a_aws_access_key",
+    "AWS_SECRET": "this_is_a_aws_access_secret",
+    "AWS_REGION": "this_is_a_aws_region",
+    "BUCKET" : "this_is_a_bucket_name"
+  }, 
+  "CF": {
+    "expires": 100,
+    "keyPairId": "this_is_a_key_pair_id",
+    "privateKey": "this_is_a_private_key",
+    "origin": "this_is_cloudfront_origin_url"
+  }
+}

@@ -1,0 +1,5 @@
+config/local*
+config/production.json
+node_modules/
+tmp/
+sessions.json
