@@ -108,7 +108,7 @@ module.exports = function (server, config) {
     /* project services */
     const projects_controller = require('./projects_controller')(config);
     (function () {
-        const projects_asset_regexp = /^\/contentbrowser\/projects\/([\w \.-]*)\/([\w \.-]*)(?:\/)?(.*)?\/(assets\/.*)/;
+        const projects_asset_regexp = /^\/contentbrowser\/projects\/([\w \.-]*)\/([\w \.-]*)\/([\w \.-]*)\/((?:assets|resources)\/.*)/;
         server.get(projects_asset_regexp, authorize, projects_controller.get_assets);
     })();
     (function() {
