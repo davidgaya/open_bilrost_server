@@ -230,11 +230,11 @@ describe('Projects', function () {
                 assert(projects);
                 assert.equal(projects.kind, "project-list");
                 assert.equal(projects.items.length, 1);
-                assert.equal(projects.totalItems, 3);
+                assert.equal(projects.totalItems > 3, true);
                 assert.equal(projects.nextLink, '/contentbrowser/projects/fl4re?maxResults=1&start=1');
                 client.get(projects.nextLink, function (err, req, res, projects_bis) {
                     assert.equal(projects_bis.items.length, 1);
-                    assert.equal(projects_bis.totalItems, 3);
+                    assert.equal(projects_bis.totalItems > 3, true);
                     done();
                 });
             });
@@ -363,8 +363,8 @@ describe('Projects', function () {
                     assert.equal(branches_bis.kind, "branch-list");
                     assert.equal(branches_bis.items.length, 1);
                     assert.equal(true, branches.totalItems > 3);
-                    const good_repo = branches_bis.items.find(r => (r.name === 'good_repo'));
-                    assert.equal('good_repo', good_repo.name, 'test branch should be in the list');
+                    const contract = branches_bis.items.find(r => (r.name === 'contract'));
+                    assert.equal('contract', contract.name, 'test branch should be in the list');
                     done();
                 });
             });
@@ -377,7 +377,7 @@ describe('Projects', function () {
             client.headers['x-session-id'] = "1234";
         });
         it("should get a list of assets", function (done) {
-            client.get('/contentbrowser/projects/fl4re/open_bilrost_test_project/assets/', function (err, req, res, assets) {
+            client.get('/contentbrowser/projects/fl4re/open_bilrost_test_project/good_repo/assets/', function (err, req, res, assets) {
                 if (err) {return done(err);}
                 assert(assets);
                 assert.equal(assets.kind, "asset-list");

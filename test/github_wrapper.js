@@ -55,9 +55,6 @@ describe('GitHub Wrapper', function () {
         it('get branches', function (done) {
             github.get_branches(access_token, "fl4re", "open_bilrost_test_project", "").then(function (branches) {
                 assert.equal(true, branches.length > 3);
-                assert.equal(branches[0].name, 'bad_repo');
-                assert.equal(branches[1].name, 'good_repo');
-                assert.equal(branches[2].name, 'master');
                 done();
             }).catch(done);
         });

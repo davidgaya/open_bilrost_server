@@ -161,15 +161,15 @@ module.exports = function (config) {
             path = path.slice(0, -1);
         }
         var paramaters = {
-                repo: repo_name,
-                path: path,
-                user: organization
+            repo: repo_name,
+            path: path,
+            user: organization
         };
-        if(branch_name) {
+        if (branch_name) {
             paramaters.ref = branch_name;
         }
 
-        github.authenticate({type: 'oauth', token: access_token});
+        github.authenticate({ type: 'oauth', token: access_token });
         return new Promise(function (resolve, reject){
             github.repos.getContent(
                 paramaters,
